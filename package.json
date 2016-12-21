@@ -1,12 +1,21 @@
 {
-  "name": "ayni-mvp",
+  "name": "meteor-app",
+  "version": "0.0.1",
+  "description": "Just a simple meteor app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Freezystem/meteor-app.git"
+  },
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "start": "meteor run",
+    "mongo": "meteor mongo",
+    "test": "meteor test --driver-package practicalmeteor:mocha --port 7357"
   },
   "dependencies": {
     "babel-runtime": "6.18.0",
-    "meteor-node-stubs": "~0.2.0",
-    "opentok": "^2.4.0"
-  }
+    "meteor-node-stubs": "~0.2.0"
+  },
+  "author": "freezystem@gmail.com",
+  "license": "UNLICENSED"
 }
