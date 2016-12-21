@@ -3,7 +3,7 @@
 import { Template }     from 'meteor/templating';
 import { ReactiveVar }  from 'meteor/reactive-var';
 
-import Acronyms         from '../../api/collections/acronyms';
+import Acronyms         from '../../../api/collections/acronyms';
 
 import './template.html';
 import '../menu';

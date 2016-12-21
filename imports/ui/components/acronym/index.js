@@ -2,7 +2,7 @@
 
 import { Template }     from 'meteor/templating';
 
-import Acronyms         from '../../api/collections/acronyms';
+import Acronyms         from '../../../api/collections/acronyms';
 
 import './template.html';
 import './style.scss';
