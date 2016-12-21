@@ -1,0 +1,14 @@
+<body>
+  <header>
+    <h1>Meteor Practice</h1>
+    <h2>{{hello}}</h2>
+    {{> menu}}
+    <button class="test">clicked : {{counter}}</button>
+    <ul class="acronyms">
+      {{#each acronyms}}
+        {{> acronym}}
+      {{/each}}
+    </ul>
+    {{> acronymForm}}
+  </header>
+</body>

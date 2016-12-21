@@ -1,0 +1,7 @@
+<template name="menu">
+  <nav>
+    {{#each link in links}}
+      <a href="{{link.href}}">{{link.label}}</a>
+    {{/each}}
+  </nav>
+</template>
