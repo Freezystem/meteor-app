@@ -4,11 +4,15 @@
     <h2>{{hello}}</h2>
     {{> menu}}
     <button class="test">clicked : {{counter}}</button>
-    <ul class="acronyms">
-      {{#each acronyms}}
-        {{> acronym}}
-      {{/each}}
-    </ul>
+    {{#if Template.subscriptionsReady}}
+      <ul class="acronyms">
+        {{#each acronyms}}
+          {{> acronym}}
+        {{/each}}
+      </ul>
+    {{else}}
+      <p>loading acronyms...</p>
+    {{/if}}
     {{> acronymForm}}
   </header>
 </body>

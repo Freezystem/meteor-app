@@ -14,7 +14,7 @@ Template.body.onCreated(function () {
   this.state    = new ReactiveDict();
   this.counter  = new ReactiveVar(0);
 
-  Meteor.subscribe('acronyms');
+  this.subscribe('acronyms');
 });
 
 Template.body.helpers({
