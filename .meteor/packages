@@ -21,6 +21,7 @@ fourseven:scss                  # Compile .scss files to .css
 seba:minifiers-autoprefixer     # Minify and autoprefix css rules
 reactive-dict                   # Allow the use of reactive dictionnary
 kadira:flow-router              # Routing for meteor application
+kadira:blaze-layout             # Layout Manager for Blaze
 practicalmeteor:mocha           # Mocha test runner for Meteor
 aldeed:simple-schema            # A simple schema validation object with reactivity
 mdg:validated-method            # A simple wrapper for Meteor.methods

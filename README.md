@@ -10,8 +10,9 @@ Just a simple app to learn meteor best practices
 - [aldeed:simple-schema](https://atmospherejs.com/aldeed/simple-schema)
 - [mdg:validated-method](https://atmospherejs.com/mdg/validated-method)
 
-####Routing
+####Routing and templating
 - [kadira:flow-router](https://atmospherejs.com/kadira/flow-router)
+- [kadira:blaze-layout](https://atmospherejs.com/kadira/blaze-layout)
 
 ####Tests
 - [practicalmeteor:mocha](https://atmospherejs.com/practicalmeteor/mocha)
