@@ -1,7 +1,14 @@
 .acronyms {
   &_item {
-    abbr {
-      text-transform : uppercase;
+    .abbr {
+      &_text {
+        text-transform : uppercase;
+        font-weight    : bold;
+      }
+      &_desc {
+        text-transform  : capitalize;
+        font-weight     : bold;
+      }
     }
   }
 }

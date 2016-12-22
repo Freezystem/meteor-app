@@ -13,6 +13,7 @@ Here is the features I intend to have in this project
 [ ] Tests
 [ ] Optimized Pub/Sub
 [ ] Authentication
+[ ] Translation
 
 ###What's in
 
@@ -30,6 +31,9 @@ Routing and templating
 
 Tests
 - [practicalmeteor:mocha](https://atmospherejs.com/practicalmeteor/mocha)
+
+Translation
+- [tap:i18n](https://atmospherejs.com/tap/i18n)
 
 ###Meteor Scripts
 

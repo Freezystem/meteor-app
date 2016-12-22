@@ -1,3 +1,12 @@
 <head>
   <title>Meteor App</title>
 </head>
+
+<template name="root">
+  <header>
+    {{> Template.dynamic template=nav}}
+  </header>
+  <section class="container">
+    {{> Template.dynamic template=page}}
+  </section>
+</template>

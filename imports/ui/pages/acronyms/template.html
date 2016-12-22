@@ -1,0 +1,17 @@
+<template name="acronyms">
+  {{#if Template.subscriptionsReady}}
+      <ul class="collection acronyms">
+        {{#each acronyms}}
+          {{> acronym}}
+        {{/each}}
+      </ul>
+  {{else}}
+    <div class="container">
+      <p class="center-align">loading acronyms...</p>
+      <div class="progress">
+        <div class="indeterminate"></div>
+      </div>
+    </div>
+  {{/if}}
+  {{> acronymForm}}
+</template>

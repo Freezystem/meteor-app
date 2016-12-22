@@ -1,6 +1,16 @@
 <template name="acronym">
-  <li class="acronyms_item">
-    <abbr title="{{desc}}">{{text}}</abbr>
-    <button class="delete">&times;</button>
+  <li class="collection-item row acronyms_item">
+    <div class="col s11">
+      <p class="abbr">
+        <span class="abbr_text">{{text}}</span>
+        <span class="abbr_word"> means </span>
+        <span class="abbr_desc">{{desc}}</span>
+      </p>
+    </div>
+    <div class="col s1">
+      <a class="delete waves-effect waves-light btn">
+        <i class="material-icons center">delete</i>
+      </a>
+    </div>
   </li>
 </template>

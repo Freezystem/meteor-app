@@ -6,9 +6,9 @@ import { check }  from 'meteor/check';
 
 const Acronyms = new Mongo.Collection('acronyms');
 
-if (Meteor.isServer) {
+if ( Meteor.isServer ) {
   Meteor.publish('acronyms', () => {
-    return Acronyms.find();
+    return Acronyms.find({});
   });
 }
 
