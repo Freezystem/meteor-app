@@ -1,25 +1,25 @@
 <template name="acronymForm">
   <form class="acronymForm">
     <label class="acronymsForm_label" for="acronymText">
-      <span>Acronym</span>
+      <span>{{_ "component.acronym_form.acronym_label"}}</span>
       <input id="acronymText"
              class="input"
              name="text"
              type="text"
              required
-             placeholder="Acronym"/>
+             placeholder="{{_ "component.acronym_form.acronym_label_placeholder"}}"/>
     </label>
     <label class="acronymsForm_label" for="acronymDesc">
-      <span>Description</span>
+      <span>{{_ "component.acronym_form.acronym_meaning"}}</span>
       <input id="acronymDesc"
              class="input"
              name="desc"
              type="text"
              required
-             placeholder="Description"/>
+             placeholder="{{_ "component.acronym_form.acronym_meaning_placeholder"}}"/>
     </label>
     <input class="delete waves-effect waves-light btn right"
            type="submit"
-           value="add acronym" />
+           value="{{_ "component.acronym_form.acronym_submit"}}" />
   </form>
 </template>

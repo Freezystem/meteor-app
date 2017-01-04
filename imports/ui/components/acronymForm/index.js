@@ -12,14 +12,15 @@ Template.acronymForm.events({
     event.preventDefault();
 
     const target = event.target;
-    const acronym = {
-      text : target.text.value,
-      desc : target.desc.value
-    };
 
-    Meteor.call('Acronyms.methods.insert', acronym, error => {
-      error && Materialize.toast(error.reason ? error.reason : 'Sorry, an unknown error occurred', 3000, 'toast-error');
-    });
+    Meteor.call('Acronyms.methods.insert', {
+        text : target.text.value.trim().toLowerCase(),
+        desc : target.desc.value.trim().toLowerCase()
+      },
+      error => {
+        error && Materialize.toast(error.reason ? error.reason : 'Sorry, an unknown error occurred', 3000, 'toast-error');
+      }
+    );
 
     target.text.value = '';
     target.desc.value = '';

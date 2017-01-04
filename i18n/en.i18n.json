@@ -1,0 +1,27 @@
+{
+  "router" : {
+    "page":
+    {
+      "home"      : "home",
+      "acronyms"  : "acronyms"
+    }
+  },
+  "page" : {
+    "home" : {
+      "title" : "welcome to meteor!"
+    }
+  },
+  "component" : {
+    "acronym" : {
+      "loading" : "loading acronyms...",
+      "meaning" : "means"
+    },
+    "acronym_form" : {
+      "acronym_label" : "acronym",
+      "acronym_label_placeholder" : "acronym (e.g: OMG)",
+      "acronym_meaning" : "meaning",
+      "acronym_meaning_placeholder" : "what does it mean",
+      "acronym_submit" : "add acronym"
+    }
+  }
+}
