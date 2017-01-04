@@ -1,8 +1,9 @@
-"use strict";
+'use strict';
 
-import { Meteor } from 'meteor/meteor';
-import { Mongo }  from 'meteor/mongo';
-import { check }  from 'meteor/check';
+import { Meteor }           from 'meteor/meteor';
+import { Mongo }            from 'meteor/mongo';
+import { SimpleSchema }     from 'meteor/aldeed:simple-schema';
+import { ValidatedMethod }  from 'meteor/mdg:validated-method';
 
 const Acronyms = new Mongo.Collection('acronyms');
 
@@ -12,20 +13,24 @@ if ( Meteor.isServer ) {
   });
 }
 
-Meteor.methods({
-  'acronyms.insert'({ text, desc }) {
-    check(text, String);
-    check(desc, String);
+export const insertAcronym = new ValidatedMethod({
+  name      : 'Acronyms.methods.insert',
+  validate  : new SimpleSchema({
+    text : { type : String },
+    desc : { type : String }
+  }).validator(),
+  run( acronym ) {
+    Acronyms.insert(acronym);
+  }
+});
 
-    Acronyms.insert({
-      text : text,
-      desc : desc
-    });
-  },
-  'acronyms.remove'(acronymId) {
-    check(acronymId, String);
-
-    Acronyms.remove(acronymId);
+export const deleteAcronym = new ValidatedMethod({
+  name      : 'Acronyms.methods.delete',
+  validate  : new SimpleSchema({
+    id : { type : String }
+  }).validator(),
+  run( acronym ) {
+    Acronyms.remove(acronym.id);
   }
 });
 

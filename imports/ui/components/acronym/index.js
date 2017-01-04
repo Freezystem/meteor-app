@@ -7,6 +7,6 @@ import './style.scss';
 
 Template.acronym.events({
   'click .delete'() {
-    Meteor.call('acronyms.remove', this._id);
+    Meteor.call('Acronyms.methods.delete', { id : this._id });
   }
 });

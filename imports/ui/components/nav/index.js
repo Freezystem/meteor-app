@@ -5,6 +5,7 @@ import { ReactiveVar }  from 'meteor/reactive-var';
 import { Template }     from 'meteor/templating';
 
 import './template.html';
+import './style.scss';
 
 Template.nav.onCreated(function() {
   this.currentPath = new ReactiveVar(FlowRouter.current().path);
