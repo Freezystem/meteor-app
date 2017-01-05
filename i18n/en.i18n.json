@@ -12,6 +12,9 @@
     }
   },
   "component" : {
+    "nav" : {
+      "switch_lang_fail" : "unable to change language"
+    },
     "acronym" : {
       "loading" : "loading acronyms...",
       "meaning" : "means"
@@ -21,7 +24,8 @@
       "acronym_label_placeholder" : "acronym (e.g: OMG)",
       "acronym_meaning" : "meaning",
       "acronym_meaning_placeholder" : "what does it mean",
-      "acronym_submit" : "add acronym"
+      "acronym_submit" : "add acronym",
+      "unknown_submit_error" : "Sorry, an unknown error occurred"
     }
   }
 }

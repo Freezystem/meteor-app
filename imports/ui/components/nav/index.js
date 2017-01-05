@@ -3,12 +3,14 @@
 import { FlowRouter }   from 'meteor/kadira:flow-router';
 import { ReactiveVar }  from 'meteor/reactive-var';
 import { Template }     from 'meteor/templating';
+import { Materialize }  from 'meteor/poetic:materialize-scss';
 import { TAPi18n }      from 'meteor/tap:i18n';
 
 import './template.html';
 import './style.scss';
 
 const { __ } = TAPi18n;
+const { toast } = Materialize;
 
 Template.nav.onCreated(function() {
   this.currentPath    = new ReactiveVar(FlowRouter.current().path);
@@ -42,7 +44,12 @@ Template.nav.events({
   'click .droplangs_item a'( event ) {
     let lang = $(event.target).attr('data-lang');
 
-    TAPi18n.setLanguage(lang);
-    $('html').attr('lang', lang);
+    TAPi18n.setLanguage(lang)
+      .done(() => {
+        $('html').attr('lang', lang);
+      })
+      .fail(error => {
+        toast(`${__('component.nav.switch_lang_fail')}: ${error}`, 3000, 'toast-error');
+      });
   }
 });
