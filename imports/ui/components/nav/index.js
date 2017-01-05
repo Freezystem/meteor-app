@@ -40,6 +40,9 @@ Template.nav.events({
     $(event.target).dropdown('open');
   },
   'click .droplangs_item a'( event ) {
-    TAPi18n.setLanguage($(event.target).attr('data-lang'));
+    let lang = $(event.target).attr('data-lang');
+
+    TAPi18n.setLanguage(lang);
+    $('html').attr('lang', lang);
   }
 });
