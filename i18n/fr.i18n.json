@@ -23,7 +23,8 @@
       "acronym_label" : "acronyme",
       "acronym_label_placeholder" : "acronyme (ex: SVP)",
       "acronym_meaning" : "signification",
-      "acronym_meaning_placeholder" : "ce qu'il veut dire",
+      "acronym_meaning_empty_placeholder" : "ce qu'il veut dire",
+      "acronym_meaning_dirty_placeholder" : "ce qu'%s veut dire",
       "acronym_submit" : "ajouter l'acronyme",
       "unknown_submit_error" : "Désolé, une erreur inconnue s'est produite"
     }

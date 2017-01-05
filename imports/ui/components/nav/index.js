@@ -38,8 +38,6 @@ Template.nav.helpers({
 
 Template.nav.events({
   'click .langs_switch'( event ) {
-    event.preventDefault();
-
     $(event.target).dropdown('open');
   },
   'click .droplangs_item a'( event ) {
