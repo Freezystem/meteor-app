@@ -8,6 +8,22 @@
             <a href="{{link.href}}">{{getRouteLabel link.label}}</a>
           </li>
         {{/each}}
+        <li class="langs">
+          <a class="langs_switch"
+             data-beloworigin="true"
+             data-alignment="right"
+             data-activates='droplangs'>
+            <i class="material-icons right">arrow_drop_down</i>
+            <span>{{languageTag}}</span>
+          </a>
+          <ul id="droplangs" class="dropdown-content droplangs">
+            {{#each lang in langs}}
+              <li class="droplangs_item">
+                <a data-lang="{{lang}}">{{getLangLabel lang}}</a>
+              </li>
+            {{/each}}
+          </ul>
+        </li>
       </ul>
     </div>
   </nav>

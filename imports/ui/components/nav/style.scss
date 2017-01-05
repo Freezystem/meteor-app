@@ -1,3 +1,14 @@
-.brand-logo {
-  padding : 0 10px !important;
+nav {
+  .nav-wrapper {
+    .brand-logo {
+      padding : 0 10px !important;
+    }
+    .langs {
+      &_switch {
+        span {
+          text-transform : uppercase;
+        }
+      }
+    }
+  }
 }

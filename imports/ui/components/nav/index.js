@@ -11,7 +11,7 @@ import './style.scss';
 const { __ } = TAPi18n;
 
 Template.nav.onCreated(function() {
-  this.currentPath = new ReactiveVar(FlowRouter.current().path);
+  this.currentPath    = new ReactiveVar(FlowRouter.current().path);
 
   this.autorun(() => {
     FlowRouter.watchPathChange();
@@ -24,9 +24,22 @@ Template.nav.helpers({
     { href : '/', label : 'home' },
     { href : '/acronyms', label : 'acronyms' }
   ],
+  langs         : Object.keys(TAPi18n.getLanguages()),
+  getLangLabel  : lang => TAPi18n.getLanguages()[lang].name,
   getRouteLabel : label => __(`router.page.${label}`),
   isActive( path ) {
     let currentPath = Template.instance().currentPath.get();
     return currentPath && path === currentPath ? 'active' : '';
+  }
+});
+
+Template.nav.events({
+  'click .langs_switch'( event ) {
+    event.preventDefault();
+
+    $(event.target).dropdown('open');
+  },
+  'click .droplangs_item a'( event ) {
+    TAPi18n.setLanguage($(event.target).attr('data-lang'));
   }
 });
