@@ -14,6 +14,7 @@ const { toast } = Materialize;
 
 Template.acronymForm.onCreated(function() {
   this.form = new ReactiveDict();
+
   this.form.set('text','');
   this.form.set('desc','');
 });
