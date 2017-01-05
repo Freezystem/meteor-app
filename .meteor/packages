@@ -27,3 +27,5 @@ aldeed:simple-schema            # A simple schema validation object with reactiv
 mdg:validated-method            # A simple wrapper for Meteor.methods
 tap:i18n                        # A comprehensive internationalization solution for Meteor
 poetic:materialize-scss         # Material Design for Meteor
+u2622:persistent-session        # Persistently store Session data on the client
+session                         # Sessions for Meteor

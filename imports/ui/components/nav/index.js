@@ -1,5 +1,6 @@
 'use strict';
 
+import { Session }      from 'meteor/session';
 import { FlowRouter }   from 'meteor/kadira:flow-router';
 import { ReactiveVar }  from 'meteor/reactive-var';
 import { Template }     from 'meteor/templating';
@@ -46,6 +47,7 @@ Template.nav.events({
 
     TAPi18n.setLanguage(lang)
       .done(() => {
+        Session.setPersistent('uiLang', lang);
         $('html').attr('lang', lang);
       })
       .fail(error => {
