@@ -13,7 +13,7 @@
     "test": "meteor test --driver-package practicalmeteor:mocha --port 7357"
   },
   "dependencies": {
-    "babel-runtime": "6.18.0",
+    "babel-runtime": "6.20.0",
     "meteor-node-stubs": "~0.2.0"
   },
   "author": "freezystem@gmail.com",
